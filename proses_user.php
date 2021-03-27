@@ -6,6 +6,9 @@ $aksi = $_GET['aksi'];
 	if ($aksi == "input_user"){
 		$db->input_user ($_POST ['username'],$_POST['password'],$_POST['type']);
 			header ("location:users.php");
+	}else if($aksi == "daftar_user"){
+		$db->daftar_user ($_POST ['username'],$_POST['password']);
+			header ("location:users.php");
 	}else if($aksi == "login"){
 		$db->masuk_user ($_POST ['username'],$_POST['password']);
 			header ("location:users.php");
