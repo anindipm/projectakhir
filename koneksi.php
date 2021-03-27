@@ -22,8 +22,11 @@ class database{
 		$hariini = date("Y-m-d H:i:s");
 		mysqli_query($this->koneksi,"insert into users(username,password,register,type,cek) values ('$username','$password','$hariini','$type','0')");
 	}
-	function edit_user($iduser,$username,$type,$cek){
-		mysqli_query($this->koneksi, "update users set username='$username', type='$type', cek='$cek' where iduser='$iduser'");
+	function daftar_user($username,$password){
+		mysqli_query($this->koneksi,"insert into users(username,password) values ('$username','$password')");
+	}
+	function edit_user($iduser,$username,$password,$type,$cek){
+		mysqli_query($this->koneksi, "update users set username='$username', password='$password', type='$type', cek='$cek' where iduser='$iduser'");
 	}
 	function ambil_data_user($iduser){
 		$data = mysqli_query($this->koneksi,"select * from users where iduser='$iduser'");
