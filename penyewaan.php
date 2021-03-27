@@ -4,6 +4,13 @@
 	include "koneksi.php";
 	$db = new database();
 	$data_penyewaan = $db->tampil_penyewaan();
+	$iduser = $_SESSION['iduser'];
+	$username = $_SESSION['username'];
+	
+	if(!isset($_SESSION['is_login'])){
+		header("location:login.php");
+	
+	}
 	
 	if(isset($_GET['q'])){
 		$db->logout();
