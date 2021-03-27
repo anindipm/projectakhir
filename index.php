@@ -38,7 +38,7 @@ end -->
             
             <a href="login.php"  type="button" class="btn btn-outline-primary">Masuk</a>
             <div style='margin-right:2%; margin-bottom:1%;'></div>
-            <a href="tambah_user.php"  type="button" class="btn btn-outline-success">Daftar</a>
+            <a href="daftar_user.php"  type="button" class="btn btn-outline-success">Daftar</a>
             
 		<div>
 		</div>
