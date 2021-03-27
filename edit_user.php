@@ -37,7 +37,13 @@ if(!is_null($iduser)){
 		</div>
 		</div>
 		
-
+		<div class="form-group row justify-content-md-center">
+		<label for="password" class="col-sm-2 col-form-label">Password</label>
+			<div class="col-6 col-sm-7">
+		<input type="text" id="password" class="form-control" value="<?php echo $data_user['password']; ?>" name="password" required>
+		</div>
+		</div>
+		
 		<div class="form-group row justify-content-md-center">
 			<label for="type" class="col-sm-2 col-form-label">Tipe</label>
 			<div class="col-6 col-sm-7">
