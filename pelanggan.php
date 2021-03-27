@@ -4,11 +4,18 @@
 	include "koneksi.php";
 	$db = new database();
 	$data_pelanggan = $db->tampil_pelanggan();
+	$iduser = $_SESSION['iduser'];
+	$username = $_SESSION['username'];
 	
+	if(!isset($_SESSION['is_login'])){
+		header("location:login.php");
+	
+	}
 	if(isset($_GET['q'])){
 		$db->logout();
 		header("location:index.php");
 	}
+	
 ?>
 <html>
 <head><title>Pelanggan</title>
